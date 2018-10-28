@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eferada.Tests", "Eferada.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{409D3C16-04B9-40DC-A228-667773E30AF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eferada.Data.Model", "Eferada.Data.Model\Eferada.Data.Model.csproj", "{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{409D3C16-04B9-40DC-A228-667773E30AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{409D3C16-04B9-40DC-A228-667773E30AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{409D3C16-04B9-40DC-A228-667773E30AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
