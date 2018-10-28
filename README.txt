@@ -1,0 +1,1 @@
+ASP.NET MVC5 based solution for university bussiness related stuff.
