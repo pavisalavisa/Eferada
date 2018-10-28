@@ -1,54 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Eferada;
+﻿using Business.Services.Contracts;
 using Eferada.Controllers;
+using FluentAssertions;
+using Moq;
+using NUnit.Framework;
+using System.Web.Mvc;
 
 namespace Eferada.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
+        private Mock<ITestService> _testService;
+
+        private HomeController _controller;
+        [SetUp]
+        public void SetUp()
+        {
+            _testService = new Mock<ITestService>();
+
+            _controller=new HomeController(_testService.Object);
+        }
+       [Test]
         public void Index()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = _controller.Index() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            result.Should().NotBeNull();
         }
 
-        [TestMethod]
-        public void About()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //[TestMethod]
+        //public void About()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+        //    // Act
+        //    ViewResult result = controller.About() as ViewResult;
 
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
+        //    // Assert
+        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        //}
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //[TestMethod]
+        //public void Contact()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+        //    // Act
+        //    ViewResult result = controller.Contact() as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
-        }
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
     }
 }

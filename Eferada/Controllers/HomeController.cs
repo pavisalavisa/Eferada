@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Business.Services.Contracts;
 using System.Web.Mvc;
 
 namespace Eferada.Controllers
 {
     public class HomeController : Controller
     {
+        private ITestService _testService;
+        public HomeController(ITestService testService)
+        {
+            _testService = testService;
+        }
         public ActionResult Index()
         {
             return View();
@@ -15,7 +17,7 @@ namespace Eferada.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = _testService.Speak();
 
             return View();
         }
