@@ -1,10 +1,11 @@
-﻿using Eferada.Data.Model.Helpers;
+﻿using Eferada.Data.Model.Contracts;
+using Eferada.Data.Model.Helpers;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 
 namespace Eferada.Data.Model.Entities.Identity
 {
-    public class ApplicationUser:IdentityUser<int,ApplicationUserLogin,ApplicationUserRole,ApplicationUserClaim>,IEntity
+    public class ApplicationUser:IdentityUser<int,ApplicationUserLogin,ApplicationUserRole,ApplicationUserClaim>,IEntity,IAuditable
     {
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
