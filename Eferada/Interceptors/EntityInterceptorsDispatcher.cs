@@ -1,5 +1,6 @@
 ﻿using Eferada.Data.Model.Entities;
 using Eferada.DatabaseContext;
+using Eferada.Interceptors.Auditable;
 using System.Collections.Generic;
 using System.Data.Entity;
 

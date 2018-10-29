@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace Eferada.Interceptors.Auditable
 {
-    interface IEntityInterceptor
+    public interface IEntityInterceptor
     {
         int Order { get; }
 

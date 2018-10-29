@@ -12,19 +12,19 @@ namespace Eferada.Interceptors.Auditable
         public int Order =>int.MinValue;
         public void OnEntityChanged(IEferadaDbContext eferadaDbContext, IEntity entity, EntityState entityState)
         {
-            if (entity is ICreatedTimestampAuditable createdTrackedEntity)
+            if (entity is ICreatedTimestampAuditable)
             {
                 if (entityState == EntityState.Added)
                 {
-                    createdTrackedEntity.CreatedTimestamp = DateTime.UtcNow;
+                    ((ICreatedTimestampAuditable) entity).CreatedTimestamp = DateTime.UtcNow;
                 }
             }
 
-            if (entity is ILastUpdatedTimestampAuditable updatedTrackedEntity)
+            if (entity is ILastUpdatedTimestampAuditable)
             {
                 if (new[] {EntityState.Added, EntityState.Modified}.Contains(entityState))
                 {
-                    updatedTrackedEntity.LastUpdatedTimestamp = DateTime.UtcNow;
+                    ((ILastUpdatedTimestampAuditable) entity).LastUpdatedTimestamp = DateTime.UtcNow;
                 }
             }
         }

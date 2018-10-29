@@ -1,10 +1,10 @@
-﻿using Eferada.Models;
-using System;
+﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Threading;
 using System.Threading.Tasks;
+using ApplicationUser = Eferada.Data.Model.Entities.Identity.ApplicationUser;
 
 namespace Eferada.DatabaseContext
 {
@@ -17,7 +17,7 @@ namespace Eferada.DatabaseContext
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
         DbChangeTracker ChangeTracker { get; }
         DbContextConfiguration Configuration { get; }
-        Database database { get; }
+        Database Database { get; }
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
         DbEntityEntry Entry(object entity);
         IDbAsyncEnumerable<DbEntityValidationResult> GetValidationErrors();

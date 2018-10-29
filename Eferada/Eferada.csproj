@@ -208,11 +208,15 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DatabaseContext\DbContextExtensions.cs" />
     <Compile Include="DatabaseContext\EferadaDbContext.cs" />
     <Compile Include="DatabaseContext\IEferadaDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
+    <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
+    <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
     <Compile Include="Migrations\201810281714031_InitialMigration.cs" />
     <Compile Include="Migrations\201810281714031_InitialMigration.Designer.cs">
       <DependentUpon>201810281714031_InitialMigration.cs</DependentUpon>
