@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Business.DependecyModules;
+using Eferada.DependencyModules;
+using System.Reflection;
 
 namespace Eferada.App_Start
 {
@@ -21,7 +23,9 @@ namespace Eferada.App_Start
             containerBuilder.RegisterFilterProvider();
 
             //Register modules
+            containerBuilder.RegisterAssemblyModules(Assembly.GetExecutingAssembly());
             containerBuilder.RegisterModule(new BusinessIocModule(true));
+            containerBuilder.RegisterModule(new DataIocModule());
 
             return containerBuilder.Build();
         }
