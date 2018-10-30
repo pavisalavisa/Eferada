@@ -208,27 +208,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DatabaseContext\DbContextExtensions.cs" />
-    <Compile Include="DatabaseContext\EferadaDbContext.cs" />
-    <Compile Include="DatabaseContext\IEferadaDbContext.cs" />
     <Compile Include="DependencyModules\DataIocModule.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
-    <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
-    <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
-    <Compile Include="Migrations\201810281714031_InitialMigration.cs" />
-    <Compile Include="Migrations\201810281714031_InitialMigration.Designer.cs">
-      <DependentUpon>201810281714031_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\GenericRepository.cs" />
-    <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -302,11 +289,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810281714031_InitialMigration.resx">
-      <DependentUpon>201810281714031_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{409D3C16-04B9-40DC-A228-667773E30AF0}</Project>
       <Name>Business</Name>
@@ -318,6 +300,10 @@
     <ProjectReference Include="..\Eferada.Data.Model\Eferada.Data.Model.csproj">
       <Project>{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}</Project>
       <Name>Eferada.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eferada.Data\Eferada.Data.csproj">
+      <Project>{21D7329C-0CB8-419F-AD49-E5CACF22BEB5}</Project>
+      <Name>Eferada.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

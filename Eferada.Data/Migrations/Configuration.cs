@@ -1,3 +1,5 @@
+using Eferada.DatabaseContext;
+
 namespace Eferada.Migrations
 {
     using System;
@@ -5,14 +7,14 @@ namespace Eferada.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Eferada.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EferadaDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Eferada.Models.ApplicationDbContext context)
+        protected override void Seed(EferadaDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

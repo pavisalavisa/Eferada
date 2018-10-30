@@ -61,7 +61,7 @@ namespace Eferada.Repository
 
         public Task<TEntity> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            return Set.FindAsync(id);
         }
 
         public IQueryable<TEntity> Query()
@@ -81,14 +81,17 @@ namespace Eferada.Repository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includeProperties)
+        public async Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            throw new NotImplementedException();
+            return await GetQuery(filter, orderBy, null, null, includeProperties)
+                .ToListAsync()
+                .ConfigureAwait(false);
         }
 
         public Task<TEntity> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            throw new NotImplementedException();
+            return GetQuery(filter, orderBy, null, null, includeProperties)
+                .FirstOrDefaultAsync();
         }
 
         public IEnumerable<TEntity> FilterBy(Expression<Func<TEntity, bool>> filter)
@@ -144,6 +147,24 @@ namespace Eferada.Repository
         public Task<TResult> MaxAsync<TResult>(Expression<Func<TEntity, bool>> filter = null, Expression<Func<TEntity, TResult>> selector = null)
         {
             throw new NotImplementedException();
+        }
+
+        private IQueryable<TEntity> GetQuery(Expression<Func<TEntity, bool>> filter, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy, int? skip, int? take, Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = Set;
+
+            if (filter != null)
+                query = query.Where(filter);
+
+            foreach (var includeProperty in includeProperties)
+                query = query.Include(includeProperty);
+
+            query = orderBy != null ? orderBy(query) : query;
+
+            if (take != null && skip != null)
+                query = query.Skip(skip.Value).Take(take.Value);
+
+            return query;
         }
     }
 }
