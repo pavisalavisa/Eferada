@@ -5,8 +5,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Eferada.Common.Exceptions;
+using Eferada.Data.DatabaseContext;
 using Eferada.Data.Model.Entities;
-using Eferada.DatabaseContext;
 
 namespace Eferada.Repository
 {

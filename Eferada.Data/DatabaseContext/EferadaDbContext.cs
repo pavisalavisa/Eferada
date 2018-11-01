@@ -1,8 +1,9 @@
 ﻿using Eferada.Common.Exceptions;
+using Eferada.Data.EntitiyConfigurations.Identity;
+using Eferada.Data.Interceptors;
+using Eferada.Data.Interceptors.Auditable;
 using Eferada.Data.Model.Entities;
 using Eferada.Data.Model.Entities.Identity;
-using Eferada.Interceptors;
-using Eferada.Interceptors.Auditable;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,7 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Threading.Tasks;
 
-
-namespace Eferada.DatabaseContext
+namespace Eferada.Data.DatabaseContext
 {
     public class EferadaDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int, ApplicationUserLogin, ApplicationUserRole, ApplicationUserClaim>, IEferadaDbContext
     {
@@ -61,7 +61,8 @@ namespace Eferada.DatabaseContext
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Add configurations here!
-            //modelBuilder.Configurations.Add()
+
+            AddIdentityConfigurations(modelBuilder);
         }
 
         public override int SaveChanges()
@@ -150,6 +151,15 @@ namespace Eferada.DatabaseContext
             }
 
             return true;
+        }
+
+        private void AddIdentityConfigurations(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ApplicationRoleConfiguration());
+            modelBuilder.Configurations.Add(new ApplicationUserClaimConfiguration());
+            modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
+            modelBuilder.Configurations.Add(new ApplicationUserLoginConfiguration());
+            modelBuilder.Configurations.Add(new ApplicationUserRoleConfiguration());
         }
     }
 }

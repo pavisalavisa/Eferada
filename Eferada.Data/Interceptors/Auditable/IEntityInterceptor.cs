@@ -1,8 +1,8 @@
-﻿using Eferada.Data.Model.Entities;
-using Eferada.DatabaseContext;
+﻿using Eferada.Data.DatabaseContext;
+using Eferada.Data.Model.Entities;
 using System.Data.Entity;
 
-namespace Eferada.Interceptors.Auditable
+namespace Eferada.Data.Interceptors.Auditable
 {
     public interface IEntityInterceptor
     {

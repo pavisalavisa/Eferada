@@ -125,12 +125,21 @@
     <Compile Include="DatabaseContext\DbContextExtensions.cs" />
     <Compile Include="DatabaseContext\EferadaDbContext.cs" />
     <Compile Include="DatabaseContext\IEferadaDbContext.cs" />
+    <Compile Include="EntitiyConfigurations\Identity\ApplicationRoleConfiguration.cs" />
+    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserClaimConfiguration.cs" />
+    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserConfiguration.cs" />
+    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserLoginConfiguration.cs" />
+    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
     <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
     <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
     <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
     <Compile Include="Migrations\201810281714031_InitialMigration.cs" />
     <Compile Include="Migrations\201810281714031_InitialMigration.Designer.cs">
       <DependentUpon>201810281714031_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011932318_AddUsersAndRoles.cs" />
+    <Compile Include="Migrations\201811011932318_AddUsersAndRoles.Designer.cs">
+      <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +149,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810281714031_InitialMigration.resx">
       <DependentUpon>201810281714031_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011932318_AddUsersAndRoles.resx">
+      <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

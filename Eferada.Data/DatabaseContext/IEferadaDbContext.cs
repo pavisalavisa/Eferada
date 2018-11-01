@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ApplicationUser = Eferada.Data.Model.Entities.Identity.ApplicationUser;
 
-namespace Eferada.DatabaseContext
+namespace Eferada.Data.DatabaseContext
 {
     public interface IEferadaDbContext : IDisposable
     {

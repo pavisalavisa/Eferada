@@ -1,10 +1,10 @@
-﻿using Eferada.Data.Model.Entities;
-using Eferada.DatabaseContext;
-using Eferada.Interceptors.Auditable;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
+using Eferada.Data.DatabaseContext;
+using Eferada.Data.Interceptors.Auditable;
+using Eferada.Data.Model.Entities;
 
-namespace Eferada.Interceptors
+namespace Eferada.Data.Interceptors
 {
     public class EntityInterceptorsDispatcher
     {

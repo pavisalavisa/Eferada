@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Data.Entity;
 
-namespace Eferada.DatabaseContext
+namespace Eferada.Data.DatabaseContext
 {
     public static class DbContextExtensions
     {

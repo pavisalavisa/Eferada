@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using Eferada.DatabaseContext;
-using Eferada.Interceptors;
-using Eferada.Interceptors.Auditable;
+using Eferada.Data.DatabaseContext;
+using Eferada.Data.Interceptors;
+using Eferada.Data.Interceptors.Auditable;
 using Eferada.Repository;
 
 namespace Eferada.DependencyModules

@@ -1,11 +1,11 @@
-﻿using Eferada.Data.Model.Contracts;
+﻿using Eferada.Data.DatabaseContext;
+using Eferada.Data.Model.Contracts;
 using Eferada.Data.Model.Entities;
-using Eferada.DatabaseContext;
 using System;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Eferada.Interceptors.Auditable
+namespace Eferada.Data.Interceptors.Auditable
 {
     public class AuditableInterceptor:IEntityInterceptor
     {
