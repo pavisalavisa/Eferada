@@ -136,6 +136,7 @@
     <Compile Include="Entities\Identity\ApplicationUserLogin.cs" />
     <Compile Include="Entities\Identity\ApplicationUserRole.cs" />
     <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Enums\MedianGradeType.cs" />
     <Compile Include="Enums\Roles.cs" />
     <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

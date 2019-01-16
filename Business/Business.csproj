@@ -156,10 +156,21 @@
     <Compile Include="DependecyModules\BusinessServicesModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Contracts\IBusinessServiceMarker.cs" />
+    <Compile Include="Services\Contracts\IGradeCalculator.cs" />
     <Compile Include="Services\Contracts\ITestService.cs" />
+    <Compile Include="Services\GradeCalculator.cs" />
     <Compile Include="Services\TestService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Eferada.Data.Model\Eferada.Data.Model.csproj">
+      <Project>{B15A7BAA-5AFE-4E1A-AD9C-D185AF2F2123}</Project>
+      <Name>Eferada.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eferada.Data\Eferada.Data.csproj">
+      <Project>{21D7329C-0CB8-419F-AD49-E5CACF22BEB5}</Project>
+      <Name>Eferada.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
