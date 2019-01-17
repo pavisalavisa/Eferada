@@ -4,7 +4,7 @@
     ////Used to mark business services.
     ////Used to find all business services in module which registers business serices
     //</summary>
-    internal interface IBusinessServiceMarker
+    interface IBusinessServiceMarker
     {
     }
 }

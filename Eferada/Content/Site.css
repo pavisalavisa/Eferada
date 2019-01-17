@@ -1,4 +1,9 @@
-﻿body {
+﻿html {
+    --main-color:#20b2aa;
+    --secondary-color:#f5f5dc;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -22,3 +27,5 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
