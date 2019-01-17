@@ -130,6 +130,7 @@
     <Compile Include="EntitiyConfigurations\Identity\ApplicationUserConfiguration.cs" />
     <Compile Include="EntitiyConfigurations\Identity\ApplicationUserLoginConfiguration.cs" />
     <Compile Include="EntitiyConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
+    <Compile Include="EntityConfigurations\CourseConfiguration.cs" />
     <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
     <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
     <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
@@ -140,6 +141,10 @@
     <Compile Include="Migrations\201811011932318_AddUsersAndRoles.cs" />
     <Compile Include="Migrations\201811011932318_AddUsersAndRoles.Designer.cs">
       <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171927511_AddCourseTable.cs" />
+    <Compile Include="Migrations\201901171927511_AddCourseTable.Designer.cs">
+      <DependentUpon>201901171927511_AddCourseTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811011932318_AddUsersAndRoles.resx">
       <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171927511_AddCourseTable.resx">
+      <DependentUpon>201901171927511_AddCourseTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

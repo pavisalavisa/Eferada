@@ -1,5 +1,6 @@
 ﻿using Eferada.Common.Exceptions;
 using Eferada.Data.EntitiyConfigurations.Identity;
+using Eferada.Data.EntityConfigurations;
 using Eferada.Data.Interceptors;
 using Eferada.Data.Interceptors.Auditable;
 using Eferada.Data.Model.Entities;
@@ -63,6 +64,7 @@ namespace Eferada.Data.DatabaseContext
             //Add configurations here!
 
             AddIdentityConfigurations(modelBuilder);
+            modelBuilder.Configurations.Add(new CourseConfiguration());
         }
 
         public override int SaveChanges()
