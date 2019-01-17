@@ -4,7 +4,7 @@
     {
         //private const int MAX_ACADEMIC_YEAR=5;
         //private const int MAX_ECTS_PER_YEAR = 60;
-        //private readonly IRepository<Student> _studentRepository;
+        //private readonly IRepository<Employee> _studentRepository;
         //private readonly IRepository<StudentCourse> _studentCourseRepository;
         //private readonly IRepository<Course> _courseRepository;
 
@@ -19,7 +19,7 @@
         //            courses.Where(x => x.Id == studentCourse.CourseId).Sum(x => x.ECTS)
 
         //    };
-        //public GradeCalculator(IRepository<Student> studentRepository, IRepository<StudentCourse> studentCourseRepository, IRepository<Course> courseRepository)
+        //public GradeCalculator(IRepository<Employee> studentRepository, IRepository<StudentCourse> studentCourseRepository, IRepository<Course> courseRepository)
         //{
         //    _studentRepository = studentRepository;
         //    _studentCourseRepository = studentCourseRepository;
@@ -60,7 +60,7 @@
 
         //    return medianGradeTypeToCalculator[gradeType](coursesTakenOnAcademicYear, coursesAvailableOnAcademicYear);
         //}
-       
+
         //private bool IsValidAcademicYear(int academicYear)
         //{
         //    return academicYear > 0 && academicYear < MAX_ACADEMIC_YEAR;

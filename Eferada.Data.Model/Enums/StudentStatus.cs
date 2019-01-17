@@ -4,6 +4,5 @@
     {
         Regular = 1,
         PartTime = 2
-
     }
 }
