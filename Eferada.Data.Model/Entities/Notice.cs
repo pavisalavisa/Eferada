@@ -1,5 +1,5 @@
-﻿using System;
-using Eferada.Data.Model.Entities.Base;
+﻿using Eferada.Data.Model.Entities.Base;
+using System;
 
 namespace Eferada.Data.Model.Entities
 {
@@ -8,6 +8,7 @@ namespace Eferada.Data.Model.Entities
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime PublicationDateTime { get; set; }
+        public int NoticeCreatorId { get; set; }
 
         public Employee NoticeCreator { get; set; }// TODO: add 1 to M configuration
     }
