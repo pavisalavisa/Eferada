@@ -133,6 +133,8 @@
     <Compile Include="EntityConfigurations\Identity\ApplicationUserLoginConfiguration.cs" />
     <Compile Include="EntityConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
     <Compile Include="EntityConfigurations\NoticeConfiguration.cs" />
+    <Compile Include="EntityConfigurations\StudentConfiguration.cs" />
+    <Compile Include="EntityConfigurations\SubjectConfiguration.cs" />
     <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
     <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
     <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
@@ -152,6 +154,10 @@
     <Compile Include="Migrations\201901172000241_AddNoticeTableAndEmployeeTable.Designer.cs">
       <DependentUpon>201901172000241_AddNoticeTableAndEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs" />
+    <Compile Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.Designer.cs">
+      <DependentUpon>201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901172000241_AddNoticeTableAndEmployeeTable.resx">
       <DependentUpon>201901172000241_AddNoticeTableAndEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.resx">
+      <DependentUpon>201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

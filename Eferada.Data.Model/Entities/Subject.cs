@@ -1,4 +1,5 @@
 ﻿using Eferada.Data.Model.Entities.Base;
+using System.Collections.Generic;
 
 namespace Eferada.Data.Model.Entities
 {
@@ -6,5 +7,7 @@ namespace Eferada.Data.Model.Entities
     {
         public int ECTSNumber { get; set; }
         public string ProfessorName { get; set; }//Professors are not included in the system for now
+
+        public ICollection<Course> Courses { get; set; }
     }
 }

@@ -1,18 +1,15 @@
-﻿using System;
-using Eferada.Data.Model.Entities.Base;
+﻿using Eferada.Data.Model.Entities.Base;
 using Eferada.Data.Model.Entities.Identity;
 using Eferada.Data.Model.Enums;
+using System;
 
 namespace Eferada.Data.Model.Entities
 {
     public class Student : BaseEntity
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
         public int AcademicYear { get; set; }
         public string StudentCardCode { get; set; }
         public int CourseId { get; set; }
-        public string Sex { get; set; }
         public DateTime BirthDateTime { get; set; }
         public DateTime EnrollmentYear { get; set; }
         public StudentStatus StudentStatus { get; set; }
