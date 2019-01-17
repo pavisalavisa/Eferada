@@ -131,7 +131,6 @@
     <Compile Include="Contracts\ILastUpdatedTimestampAuditable.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
     <Compile Include="Entities\Course.cs" />
-    <Compile Include="Entities\CourseSubject.cs" />
     <Compile Include="Entities\Identity\ApplicationRole.cs" />
     <Compile Include="Entities\Identity\ApplicationUser.cs" />
     <Compile Include="Entities\Identity\ApplicationUserClaim.cs" />
@@ -141,7 +140,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Notice.cs" />
     <Compile Include="Entities\Student.cs" />
-    <Compile Include="Entities\StudentSubjectTet.cs" />
+    <Compile Include="Entities\StudentSubjectTest.cs" />
     <Compile Include="Entities\Subject.cs" />
     <Compile Include="Entities\SubjectStudent.cs" />
     <Compile Include="Entities\SubjectTest.cs" />

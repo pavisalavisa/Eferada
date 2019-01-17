@@ -1,6 +1,6 @@
 ﻿namespace Eferada.Data.Model.Entities
 {
-    public class StudentSubjectTet
+    public class StudentSubjectTest
     {
         public int SubjectTestId { get; set; }
         public int StudentId { get; set; }

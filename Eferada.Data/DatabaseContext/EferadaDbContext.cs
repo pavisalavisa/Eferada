@@ -69,6 +69,7 @@ namespace Eferada.Data.DatabaseContext
             modelBuilder.Configurations.Add(new NoticeConfiguration());
             modelBuilder.Configurations.Add(new StudentConfiguration());
             modelBuilder.Configurations.Add(new SubjectConfiguration());
+            modelBuilder.Configurations.Add(new SubjectTestConfiguration());
         }
 
         public override int SaveChanges()

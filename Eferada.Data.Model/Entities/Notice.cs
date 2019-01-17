@@ -10,6 +10,6 @@ namespace Eferada.Data.Model.Entities
         public DateTime PublicationDateTime { get; set; }
         public int NoticeCreatorId { get; set; }
 
-        public Employee NoticeCreator { get; set; }// TODO: add 1 to M configuration
+        public Employee NoticeCreator { get; set; }
     }
 }

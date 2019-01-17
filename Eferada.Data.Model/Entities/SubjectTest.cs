@@ -1,5 +1,5 @@
-﻿using System;
-using Eferada.Data.Model.Entities.Base;
+﻿using Eferada.Data.Model.Entities.Base;
+using System;
 
 namespace Eferada.Data.Model.Entities
 {
@@ -9,5 +9,8 @@ namespace Eferada.Data.Model.Entities
         public int CourseId { get; set; } //TODO: 1 to many
         public int SubjectId { get; set; } //TODO: 1 to many
         public int Term { get; set; }
+
+        public Course Course { get; set; }
+        public Subject Subject { get; set; }
     }
 }
