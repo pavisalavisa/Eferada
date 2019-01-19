@@ -20,7 +20,7 @@ namespace Eferada.Data.EntityConfigurations
                 .HasColumnName("Id")
                 .HasColumnType("int")
                 .IsRequired()
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(x => x.DateTime)
                 .HasColumnName("DateTime")

@@ -243,6 +243,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentsContoller.cs" />
@@ -259,6 +260,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RequestModels\CourseRequestPostModel.cs" />
     <Compile Include="Models\RequestModels\StudentPutRequestModel.cs" />
     <Compile Include="Models\RequestModels\StudentPostRequestModel.cs" />
     <Compile Include="Models\ResponseModels\StudentResponseModel.cs" />
