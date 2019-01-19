@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Business.Services;
 using Business.Services.Contracts;
 
 namespace Business.DependecyModules
@@ -32,6 +33,9 @@ namespace Business.DependecyModules
             }
 
             //Other custom registrations go here.
+            builder.RegisterType<StudentsBusinessService>()
+                .AsImplementedInterfaces()
+                .InstancePerDependency();
         }
     }
 }

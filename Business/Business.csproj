@@ -157,8 +157,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Contracts\IBusinessServiceMarker.cs" />
     <Compile Include="Services\Contracts\IGradeCalculator.cs" />
+    <Compile Include="Services\Contracts\IStudentBusinessService.cs" />
     <Compile Include="Services\Contracts\ITestService.cs" />
     <Compile Include="Services\GradeCalculator.cs" />
+    <Compile Include="Services\StudentsBusinessService.cs" />
     <Compile Include="Services\TestService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,30 +1,14 @@
-﻿ using Business.Services.Contracts;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Eferada.Infrastructure;
 
 namespace Eferada.Controllers
 {
+    [EferadaRoutePrefix(nameof(HomeController))]
     public class HomeController : Controller
     {
-        private ITestService _testService;
-        public HomeController(ITestService testService)
-        {
-            _testService = testService;
-        }
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = _testService.Speak();
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Title = "Home Page";
 
             return View();
         }
