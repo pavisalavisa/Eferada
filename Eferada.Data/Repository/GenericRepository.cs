@@ -10,9 +10,14 @@ using Eferada.Data.Model.Entities;
 
 namespace Eferada.Repository
 {
-    public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity:class,IEntity
+    public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
         private readonly IEferadaDbContext _context;
+
+        public GenericRepository(IEferadaDbContext context)
+        {
+            _context = context;
+        }
 
         protected DbSet<TEntity> Set => _context.Set<TEntity>();
 

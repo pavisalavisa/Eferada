@@ -19,15 +19,15 @@ namespace Eferada.Data.Migrations
 
         protected override void Seed(EferadaDbContext context)
         {
-            Task.Run(async () => await SeedAsync(context).ConfigureAwait(false)).Wait();
+
         }
 
         private async Task SeedAsync(EferadaDbContext context)
         {
-            //await SeedRoles(context).ConfigureAwait(false);
-            //await SeedUsers(context).ConfigureAwait(false);
+            await SeedRoles(context).ConfigureAwait(false);
+            await SeedUsers(context).ConfigureAwait(false);
 
-            //await context.SaveChangesAsync().ConfigureAwait(false);
+            await context.SaveChangesAsync().ConfigureAwait(false);
         }
 
         private async Task SeedRoles(EferadaDbContext context)
@@ -57,52 +57,12 @@ namespace Eferada.Data.Migrations
 
         private async Task SeedUsers(EferadaDbContext context)
         {
-            //await SeedAdmin(context).ConfigureAwait(true);
-            const string studentRoleName = nameof(Roles.Student);
-            const string studentUserName = "SomeStudent";
-            const string studentEmail = "specy.specimen@gmail.com";
-            if (!context.Users.Any(x => x.UserName == studentUserName))
-            {
-                var store = new UserStore<ApplicationUser, ApplicationRole, int, ApplicationUserLogin, ApplicationUserRole, ApplicationUserClaim>(context);
-                var manager = new UserManager<ApplicationUser, int>(store);
-                var user = new ApplicationUser
-                {
-                    UserName = studentUserName,
-                    Email = studentEmail,
-                    FirstName = "Specy",
-                    LastName = "Specimen",
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    PhoneNumber="098123123"
-                };
+            //    await SeedAdmin(context).ConfigureAwait(true);
 
-                await manager.CreateAsync(user, "student.123").ConfigureAwait(false);
-                //await manager.AddToRoleAsync(user.Id, studentRoleName).ConfigureAwait(false);
-            }
-            //await SeedStundent(context).ConfigureAwait(true);
-            //const string adminRoleName = nameof(Roles.Admin);
-            //const string adminUserName = "MainAdministrator";
-            //const string adminEmail = "kristicevic.antonio@gmail.com";
-            //if (!context.Users.Any(x => x.UserName == adminUserName))
-            //{
-            //    var store = new UserStore<ApplicationUser, ApplicationRole, int, ApplicationUserLogin, ApplicationUserRole, ApplicationUserClaim>(context);
-            //    var manager = new UserManager<ApplicationUser, int>(store);
-            //    var user = new ApplicationUser
-            //    {
-            //        UserName = adminUserName,
-            //        Email = adminEmail,
-            //        FirstName = "Antonio",
-            //        LastName = "Kristicevic",
-            //        EmailConfirmed = true
-            //    };
-
-            //    await manager.CreateAsync(user, "admin.123").ConfigureAwait(true);
-            //    await manager.AddToRoleAsync(user.Id, adminRoleName).ConfigureAwait(true);
-            //}
-
+            await SeedStundent(context).ConfigureAwait(true);
         }
 
-        private async  Task SeedStundent(EferadaDbContext context)
+        private async Task SeedStundent(EferadaDbContext context)
         {
             const string studentRoleName = nameof(Roles.Student);
             const string studentUserName = "SomeStudent";

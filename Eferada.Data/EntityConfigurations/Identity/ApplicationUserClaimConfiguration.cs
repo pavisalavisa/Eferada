@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Eferada.Data.EntitiyConfigurations.Identity
+namespace Eferada.Data.EntityConfigurations.Identity
 {
     public class ApplicationUserClaimConfiguration : EntityTypeConfiguration<ApplicationUserClaim>
     {

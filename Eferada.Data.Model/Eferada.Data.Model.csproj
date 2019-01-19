@@ -130,14 +130,22 @@
     <Compile Include="Contracts\ICreatedTimestampAuditable.cs" />
     <Compile Include="Contracts\ILastUpdatedTimestampAuditable.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Identity\ApplicationRole.cs" />
     <Compile Include="Entities\Identity\ApplicationUser.cs" />
     <Compile Include="Entities\Identity\ApplicationUserClaim.cs" />
     <Compile Include="Entities\Identity\ApplicationUserLogin.cs" />
     <Compile Include="Entities\Identity\ApplicationUserRole.cs" />
     <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Notice.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\StudentSubjectTest.cs" />
+    <Compile Include="Entities\Subject.cs" />
+    <Compile Include="Entities\SubjectTest.cs" />
     <Compile Include="Enums\MedianGradeType.cs" />
     <Compile Include="Enums\Roles.cs" />
+    <Compile Include="Enums\StudentStatus.cs" />
     <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

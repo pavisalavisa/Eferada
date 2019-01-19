@@ -125,11 +125,18 @@
     <Compile Include="DatabaseContext\DbContextExtensions.cs" />
     <Compile Include="DatabaseContext\EferadaDbContext.cs" />
     <Compile Include="DatabaseContext\IEferadaDbContext.cs" />
-    <Compile Include="EntitiyConfigurations\Identity\ApplicationRoleConfiguration.cs" />
-    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserClaimConfiguration.cs" />
-    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserConfiguration.cs" />
-    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserLoginConfiguration.cs" />
-    <Compile Include="EntitiyConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
+    <Compile Include="EntityConfigurations\CourseConfiguration.cs" />
+    <Compile Include="EntityConfigurations\EmployeeConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Identity\ApplicationRoleConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Identity\ApplicationUserClaimConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Identity\ApplicationUserConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Identity\ApplicationUserLoginConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
+    <Compile Include="EntityConfigurations\NoticeConfiguration.cs" />
+    <Compile Include="EntityConfigurations\StudentConfiguration.cs" />
+    <Compile Include="EntityConfigurations\StudentSubjectTestConfiguration.cs" />
+    <Compile Include="EntityConfigurations\SubjectConfiguration.cs" />
+    <Compile Include="EntityConfigurations\SubjectTestConfiguration.cs" />
     <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
     <Compile Include="Interceptors\Auditable\IEntityInterceptor.cs" />
     <Compile Include="Interceptors\EntityInterceptorsDispatcher.cs" />
@@ -140,6 +147,34 @@
     <Compile Include="Migrations\201811011932318_AddUsersAndRoles.cs" />
     <Compile Include="Migrations\201811011932318_AddUsersAndRoles.Designer.cs">
       <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171927511_AddCourseTable.cs" />
+    <Compile Include="Migrations\201901171927511_AddCourseTable.Designer.cs">
+      <DependentUpon>201901171927511_AddCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901172000241_AddNoticeTableAndEmployeeTable.cs" />
+    <Compile Include="Migrations\201901172000241_AddNoticeTableAndEmployeeTable.Designer.cs">
+      <DependentUpon>201901172000241_AddNoticeTableAndEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs" />
+    <Compile Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.Designer.cs">
+      <DependentUpon>201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901172050529_AddSubjectTestTable.cs" />
+    <Compile Include="Migrations\201901172050529_AddSubjectTestTable.Designer.cs">
+      <DependentUpon>201901172050529_AddSubjectTestTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901190710272_AddSubjectStudentTable.cs" />
+    <Compile Include="Migrations\201901190710272_AddSubjectStudentTable.Designer.cs">
+      <DependentUpon>201901190710272_AddSubjectStudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901191049274_AddStudentSubjectTestTable.cs" />
+    <Compile Include="Migrations\201901191049274_AddStudentSubjectTestTable.Designer.cs">
+      <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901191410240_MakeIdsAsIdentity.cs" />
+    <Compile Include="Migrations\201901191410240_MakeIdsAsIdentity.Designer.cs">
+      <DependentUpon>201901191410240_MakeIdsAsIdentity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,6 +187,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811011932318_AddUsersAndRoles.resx">
       <DependentUpon>201811011932318_AddUsersAndRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171927511_AddCourseTable.resx">
+      <DependentUpon>201901171927511_AddCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901172000241_AddNoticeTableAndEmployeeTable.resx">
+      <DependentUpon>201901172000241_AddNoticeTableAndEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.resx">
+      <DependentUpon>201901172039173_AddStudentAndSubjectTableAndSubjectCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901172050529_AddSubjectTestTable.resx">
+      <DependentUpon>201901172050529_AddSubjectTestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901190710272_AddSubjectStudentTable.resx">
+      <DependentUpon>201901190710272_AddSubjectStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191049274_AddStudentSubjectTestTable.resx">
+      <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191410240_MakeIdsAsIdentity.resx">
+      <DependentUpon>201901191410240_MakeIdsAsIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

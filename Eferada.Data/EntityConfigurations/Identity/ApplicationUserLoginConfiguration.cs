@@ -1,8 +1,8 @@
-﻿using Eferada.Data.Model.Entities.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using Eferada.Data.Model.Entities.Identity;
 
-namespace Eferada.Data.EntitiyConfigurations.Identity
+namespace Eferada.Data.EntityConfigurations.Identity
 {
     public class ApplicationUserLoginConfiguration : EntityTypeConfiguration<ApplicationUserLogin>
     {
