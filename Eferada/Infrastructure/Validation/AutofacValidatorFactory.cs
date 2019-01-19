@@ -15,7 +15,8 @@ namespace Eferada.Infrastructure.Validation
 
         public override IValidator CreateInstance(Type validatorType)
         {
-            if (_context.TryResolve(validatorType, out var instance))
+            object instance;
+            if (_context.TryResolve(validatorType, out instance))
             {
                 return instance as IValidator;
             }

@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
+using Eferada.Infrastructure.Validation;
 
 namespace Eferada.App_Start
 {
@@ -17,7 +18,7 @@ namespace Eferada.App_Start
 
             ConfigureRoutes(config);
 
-            //ConfigureFilters(config);
+            ConfigureFilters(config);
 
             //ConfigureJsonMediaTypeFormatter(config);
 
@@ -49,11 +50,11 @@ namespace Eferada.App_Start
         {
 
             // Configure Web API to use only bearer token authentication.
-            config.Filters.Add(new AuthorizeAttribute());
+            //config.Filters.Add(new AuthorizeAttribute());
             //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
             //// Configure Web API model validation 
-            //config.Filters.Add(new ValidateModelStateFilterAttribute());
+            config.Filters.Add(new ValidateModelStateFilterAttribute());
         }
 
         //private static void ConfigureJsonMediaTypeFormatter(HttpConfiguration config)

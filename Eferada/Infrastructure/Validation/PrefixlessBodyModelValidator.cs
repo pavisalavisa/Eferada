@@ -11,7 +11,11 @@ namespace Eferada.Infrastructure.Validation
 
         public PrefixlessBodyModelValidator(IBodyModelValidator innerValidator)
         {
-            _innerValidator = innerValidator ?? throw new Exception("Inner validator cannot be null.");
+            if (innerValidator == null)
+            {
+                throw new Exception("Inner validator cannot be null.");
+            }
+            _innerValidator = innerValidator;
         }
 
         public bool Validate(object model, Type type, ModelMetadataProvider metadataProvider, HttpActionContext actionContext,
