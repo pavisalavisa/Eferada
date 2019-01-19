@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201901191049274_AddStudentSubjectTestTable.Designer.cs">
       <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901191410240_MakeIdsAsIdentity.cs" />
+    <Compile Include="Migrations\201901191410240_MakeIdsAsIdentity.Designer.cs">
+      <DependentUpon>201901191410240_MakeIdsAsIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
@@ -201,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901191049274_AddStudentSubjectTestTable.resx">
       <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191410240_MakeIdsAsIdentity.resx">
+      <DependentUpon>201901191410240_MakeIdsAsIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
