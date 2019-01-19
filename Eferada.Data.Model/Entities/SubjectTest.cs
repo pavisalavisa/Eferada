@@ -10,7 +10,7 @@ namespace Eferada.Data.Model.Entities
         public int SubjectId { get; set; } //TODO: 1 to many
         public int Term { get; set; }
 
-        public Course Course { get; set; }
-        public Subject Subject { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual Subject Subject { get; set; }
     }
 }

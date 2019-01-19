@@ -51,7 +51,7 @@ namespace Eferada.Data.DatabaseContext
                 new AuditableInterceptor()
             };
 
-            _entityChangEntityInterceptorsDispatcher=new EntityInterceptorsDispatcher(interceptors);
+            _entityChangEntityInterceptorsDispatcher = new EntityInterceptorsDispatcher(interceptors);
         }
 
         public EferadaDbContext(EntityInterceptorsDispatcher entityChangeInterceptorsDispatcher) : base("EferadaDbContext")
@@ -70,6 +70,7 @@ namespace Eferada.Data.DatabaseContext
             modelBuilder.Configurations.Add(new StudentConfiguration());
             modelBuilder.Configurations.Add(new SubjectConfiguration());
             modelBuilder.Configurations.Add(new SubjectTestConfiguration());
+            modelBuilder.Configurations.Add(new StudentSubjectTestConfiguration());
         }
 
         public override int SaveChanges()
@@ -103,7 +104,7 @@ namespace Eferada.Data.DatabaseContext
 
         private int Save()
         {
-            var entries = ChangeTracker.Entries().Where(x =>new[] {EntityState.Added, EntityState.Modified, EntityState.Deleted}.Contains(x.State)).ToList();
+            var entries = ChangeTracker.Entries().Where(x => new[] { EntityState.Added, EntityState.Modified, EntityState.Deleted }.Contains(x.State)).ToList();
 
             var processedEntitiesDictionary = new Dictionary<IEntity, EntityState>();
 
@@ -120,12 +121,12 @@ namespace Eferada.Data.DatabaseContext
                     continue;
                 }
 
-                processedEntitiesDictionary.Add((IEntity) entry.Entity, entry.State);
+                processedEntitiesDictionary.Add((IEntity)entry.Entity, entry.State);
             }
 
             foreach (var processedEntityRecord in processedEntitiesDictionary)
             {
-                _entityChangEntityInterceptorsDispatcher.Dispatch(this,processedEntityRecord.Key,processedEntityRecord.Value);
+                _entityChangEntityInterceptorsDispatcher.Dispatch(this, processedEntityRecord.Key, processedEntityRecord.Value);
             }
 
             try
@@ -135,7 +136,7 @@ namespace Eferada.Data.DatabaseContext
 
             catch (Exception e)
             {
-                if (e is DbUpdateException )
+                if (e is DbUpdateException)
                 {
                     throw new DatabaseConcurrencyException(((DbUpdateException)e).Entries);
                 }

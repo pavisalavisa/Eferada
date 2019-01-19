@@ -142,7 +142,6 @@
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\StudentSubjectTest.cs" />
     <Compile Include="Entities\Subject.cs" />
-    <Compile Include="Entities\SubjectStudent.cs" />
     <Compile Include="Entities\SubjectTest.cs" />
     <Compile Include="Enums\MedianGradeType.cs" />
     <Compile Include="Enums\Roles.cs" />

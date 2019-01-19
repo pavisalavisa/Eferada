@@ -48,6 +48,14 @@ namespace Eferada.Data.EntityConfigurations
                     cs.ToTable("SubjectCourse");
                 });
 
+            HasMany(x => x.Students)
+                .WithMany(x => x.Subjects)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("SubjectId");
+                    cs.MapRightKey("StudentId");
+                    cs.ToTable("SubjectStudent");
+                });
         }
     }
 }

@@ -134,6 +134,7 @@
     <Compile Include="EntityConfigurations\Identity\ApplicationUserRoleConfiguration.cs" />
     <Compile Include="EntityConfigurations\NoticeConfiguration.cs" />
     <Compile Include="EntityConfigurations\StudentConfiguration.cs" />
+    <Compile Include="EntityConfigurations\StudentSubjectTestConfiguration.cs" />
     <Compile Include="EntityConfigurations\SubjectConfiguration.cs" />
     <Compile Include="EntityConfigurations\SubjectTestConfiguration.cs" />
     <Compile Include="Interceptors\Auditable\AuditableInterceptor.cs" />
@@ -163,6 +164,14 @@
     <Compile Include="Migrations\201901172050529_AddSubjectTestTable.Designer.cs">
       <DependentUpon>201901172050529_AddSubjectTestTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901190710272_AddSubjectStudentTable.cs" />
+    <Compile Include="Migrations\201901190710272_AddSubjectStudentTable.Designer.cs">
+      <DependentUpon>201901190710272_AddSubjectStudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901191049274_AddStudentSubjectTestTable.cs" />
+    <Compile Include="Migrations\201901191049274_AddStudentSubjectTestTable.Designer.cs">
+      <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
@@ -186,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901172050529_AddSubjectTestTable.resx">
       <DependentUpon>201901172050529_AddSubjectTestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901190710272_AddSubjectStudentTable.resx">
+      <DependentUpon>201901190710272_AddSubjectStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191049274_AddStudentSubjectTestTable.resx">
+      <DependentUpon>201901191049274_AddStudentSubjectTestTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -9,5 +9,6 @@ namespace Eferada.Data.Model.Entities
         public string ProfessorName { get; set; }//Professors are not included in the system for now
 
         public ICollection<Course> Courses { get; set; }
+        public ICollection<Student> Students { get; set; }
     }
 }

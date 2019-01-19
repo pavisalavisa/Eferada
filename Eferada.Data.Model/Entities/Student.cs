@@ -2,6 +2,7 @@
 using Eferada.Data.Model.Entities.Identity;
 using Eferada.Data.Model.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace Eferada.Data.Model.Entities
 {
@@ -17,5 +18,7 @@ namespace Eferada.Data.Model.Entities
 
         public ApplicationUser ApplicationUser { get; set; } // TODO: set 1 to 1 relationship http://www.entityframeworktutorial.net/code-first/configure-one-to-one-relationship-in-code-first.aspx
         public Course Course { get; set; }// TODO: set 1 to many relationship
+        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<StudentSubjectTest> StudentSubjectTests { get; set; }
     }
 }
