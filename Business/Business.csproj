@@ -159,10 +159,12 @@
     <Compile Include="Services\Contracts\ICourseBusinessService.cs" />
     <Compile Include="Services\Contracts\IGradeCalculator.cs" />
     <Compile Include="Services\Contracts\IStudentBusinessService.cs" />
+    <Compile Include="Services\Contracts\ISubjectBusinessService.cs" />
     <Compile Include="Services\Contracts\ITestService.cs" />
     <Compile Include="Services\CourseBusinessService.cs" />
     <Compile Include="Services\GradeCalculator.cs" />
     <Compile Include="Services\StudentsBusinessService.cs" />
+    <Compile Include="Services\SubjectBusinessService.cs" />
     <Compile Include="Services\TestService.cs" />
   </ItemGroup>
   <ItemGroup>

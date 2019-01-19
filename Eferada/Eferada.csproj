@@ -247,6 +247,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentsContoller.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="DependencyModules\MapperModule.cs" />
     <Compile Include="DependencyModules\DataIocModule.cs" />
     <Compile Include="Global.asax.cs">
