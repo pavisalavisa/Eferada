@@ -146,7 +146,10 @@ namespace Eferada.Repository
 
         public int Count(Expression<Func<TEntity, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            if (filter != null)
+                return Set.Count(filter);
+
+            return Set.Count();
         }
 
         public Task<TResult> MaxAsync<TResult>(Expression<Func<TEntity, bool>> filter = null, Expression<Func<TEntity, TResult>> selector = null)
