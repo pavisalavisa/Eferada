@@ -1,0 +1,168 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  margin: 0 auto;
+  background-color: silver;
+}
+
+header {
+  background-color: lightseagreen;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  top: 0px;
+}
+#efer {
+  font-size: xx-large;
+  margin: 0.1em;
+}
+#odj {
+  width: auto;
+  padding: 10px 18px;
+  background-color: grey;
+}
+
+main {
+  max-width: 800px;
+  margin: 0.7em auto;
+  padding: 0 0.1em;
+  float: left;
+}
+img {
+  width: 100%;
+}
+.logo-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#side-menu {
+  display: grid;
+  grid-row-gap: 0.2em;
+  border: darkgray;
+  border-style: groove;
+  width: 200px;
+  position: sticky;
+  height: 600px;
+}
+
+.izbor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  text-align: center;
+  background-color: grey;
+}
+#side-menu .izbor {
+}
+
+#glavna {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#obavijesti {
+  margin: 2em auto;
+}
+
+#ob1 {
+  border-color: grey;
+  /* border-color: green; */
+  border-style: dotted;
+  padding: 1em;
+}
+#novaOb {
+  width: auto;
+  padding: 10px 18px;
+  background-color: grey;
+}
+#sad {
+  color: lightseagreen;
+}
+table {
+  border: 1px solid black;
+  width: 270px;
+}
+
+#search-container {
+  background-color: white;
+  padding: 0.25em;
+}
+
+#search-container .search-icon {
+  color: black;
+}
+
+#search-box {
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+#kol {
+  color: lightseagreen;
+}
+
+/*pocetna*/
+form {
+  align-content: center;
+  margin: 5em auto;
+  max-width: 600px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#logBut {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
