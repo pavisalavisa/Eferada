@@ -1,0 +1,30 @@
+[
+  {
+    "AcademicYear": 2,
+    "StudentCardCode": "1528912",
+    "CourseId": 1,
+    "BirthDateTime": "2019-01-19T15:13:56.56",
+    "EnrollmentYear": "2019-01-19T15:13:56.56",
+    "StudentStatus": 1,
+    "Address": "Ivana Gundulica 22",
+    "ApplicationUser": null,
+    "Course": null,
+    "Subjects": null,
+    "StudentSubjectTests": null,
+    "Id": 1
+  },
+  {
+    "AcademicYear": 2,
+    "StudentCardCode": "1241661122",
+    "CourseId": 1,
+    "BirthDateTime": "2019-01-19T15:14:20.293",
+    "EnrollmentYear": "2019-01-19T15:14:20.293",
+    "StudentStatus": 1,
+    "Address": "Josipa Juraja Strossmeyera 291",
+    "ApplicationUser": null,
+    "Course": null,
+    "Subjects": null,
+    "StudentSubjectTests": null,
+    "Id": 2
+  }
+]
